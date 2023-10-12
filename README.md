@@ -1,5 +1,8 @@
-[![CI](https://github.com/Leikt/hermaeus/workflows/CI/badge.svg?event=push)](https://github.com/Leikt/hermaeus/actions?query=event%3Apush+branch%3Amain+workflow%3ACI)
-[![versions](https://img.shields.io/pypi/pyversions/hermaeus.svg)](https://github.com/Leikt/hermaeus)
-[![downloads](https://static.pepy.tech/badge/hermaeus/month)](https://pepy.tech/project/hermaeus)
-![versions](https://img.shields.io/pypi/pyversions/hermaeus.svg)](https://github.com/Leikt/hermaeus)
-[![license](https://img.shields.io/github/license/Leikt/hermaeus.svg)](https://github.com/Leikt/hermaeus/blob/main/LICENSE)
+# Hermaeus
+
+[![CI](https://github.com/Leikt/hermaeus-core/workflows/CI/badge.svg?event=push)](https://github.com/Leikt/hermaeus-core/actions?query=event%3Apush+branch%3Amain+workflow%3ACI)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hermaeus)
+[![license](https://img.shields.io/github/license/Leikt/hermaeus-core.svg)](https://github.com/Leikt/hermaeus-core/blob/main/LICENSE)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/hermaeus)
+
+Multi-sources and destination data handling framework.
