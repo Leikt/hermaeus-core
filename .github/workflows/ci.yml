@@ -7,8 +7,8 @@ on:
     branches:
       - master
       - development
-  #    tags:
-  #      - '**'
+    tags:
+      - '**'
   pull_request: { }
 
 
@@ -83,3 +83,31 @@ jobs:
         with:
           name: coverage-html
           path: htmlcov
+
+  release:
+    needs: test
+    if: needs.test.outputs.result == 'success' && startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    environment: release
+
+    permissions:
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install
+        run: pip install -U build
+
+      - name: Build
+        run: python -m build
+
+      - name: Upload package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_TOKEN }}
